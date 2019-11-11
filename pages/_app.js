@@ -13,6 +13,8 @@ import Flat from 'flat'
 //引入中英文对象
 import _ZH from '../locales/zh-CN'
 import _EN from '../locales/en-US'
+
+
 import Aux from "../src/components/hoc/Aux";
 
 
@@ -45,7 +47,7 @@ class MyApp extends App{
                 result = _ZH
         }
         return result;
-    }
+    };
 
 
     static getDerivedStateFromProps(nextProps, prevState) {
