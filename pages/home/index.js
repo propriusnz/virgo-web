@@ -10,6 +10,10 @@ class Home extends Component {
         intl: intlShape.isRequired
     }
 
+    static getInitialProps = async () =>{
+        return {}
+    }
+
     render() {
         return (
             <Aux>

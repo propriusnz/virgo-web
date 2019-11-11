@@ -5,7 +5,7 @@ class MyDocument extends Document{
         return (
             <Html>
                 <Head>
-                    <link href="stylesheet/common.css" rel="stylesheet"/>
+                    {/*<link href="stylesheet/common.css" rel="stylesheet"/>*/}
                 </Head>
                 <body>
                     <Main/>

@@ -37,18 +37,17 @@ class MyApp extends App{
     getLocaleDatas = (lang) =>{
         let result = {};
         switch (lang) {
-            case 'zh-CN':
-                result = _ZH;
-                break;
             case 'en-US':
                 result = _EN;
                 break;
+            case 'zh-CN':
+                result = _ZH;
+                break;
             default:
-                result = _ZH
+                result = _EN
         }
         return result;
     };
-
 
     static getDerivedStateFromProps(nextProps, prevState) {
         if (nextProps.Component !== prevState.Component
@@ -63,9 +62,12 @@ class MyApp extends App{
         return null;
     }
 
+
+
+
     render(){
         const { Component, pageProps, router } = this.props;
-        const languages = router.query.lang || 'zh-CN';
+        const languages = router.query.lang || 'zh-EN';
         const appLocale = this.getLocale(languages);
         return (
            <Aux>
@@ -84,5 +86,7 @@ class MyApp extends App{
         )
     }
 }
+
+
 
 export default MyApp
