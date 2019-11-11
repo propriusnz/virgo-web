@@ -5,7 +5,7 @@ class MyDocument extends Document{
         return (
             <Html>
                 <Head>
-                    <link rel="stylesheet" href="index.css"/>
+
                 </Head>
                 <body>
                     <Main/>
