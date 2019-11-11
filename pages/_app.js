@@ -1,5 +1,5 @@
 import App from "next/app";
-import React from "react";
+import React,{Fragment} from "react";
 import {Provider} from 'react-redux'
 import store from '../src/redux/store'
 
@@ -15,7 +15,6 @@ import _ZH from '../locales/zh-CN'
 import _EN from '../locales/en-US'
 
 
-import Aux from "../src/components/hoc/Aux";
 
 
 class MyApp extends App{
@@ -70,7 +69,7 @@ class MyApp extends App{
         const languages = router.query.lang || 'zh-EN';
         const appLocale = this.getLocale(languages);
         return (
-           <Aux>
+           <Fragment>
                <Provider store={store}>
                    <ConfigProvider locale={appLocale.antd}>
                        <IntlProvider
@@ -82,7 +81,7 @@ class MyApp extends App{
                        </IntlProvider>
                    </ConfigProvider>
                </Provider>
-           </Aux>
+           </Fragment>
         )
     }
 }

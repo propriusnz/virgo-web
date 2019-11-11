@@ -2,8 +2,7 @@ import { Component } from 'react';
 import {Button} from 'antd';
 import Link from 'next/link';
 import { FormattedMessage,injectIntl, intlShape  } from 'react-intl';
-import Aux from "../../src/components/hoc/Aux";
-import React from 'react'
+import React,{Fragment} from 'react'
 
 class Home extends Component {
     static propTypes = {
@@ -16,12 +15,12 @@ class Home extends Component {
 
     render() {
         return (
-            <Aux>
+            <Fragment>
                 <FormattedMessage id="home.title"/>
                 <br/>
                 <Link href="/home?lang=zh-CN"><Button>ABC</Button></Link>
                 <Link href="/home?lang=en-US"><Button>ABC</Button></Link>
-            </Aux>
+            </Fragment>
         );
     }
 }
